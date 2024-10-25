@@ -34,18 +34,30 @@ const squadreCalcio = [
 	}),
 ];
 
-const arrayRandom = [];
-for (let i = 1; i <= 5; i++) {
-	const numeroRandom = Math.floor(Math.random() * 30);
-	arrayRandom.push(numeroRandom);
-}
+// squadreCalcio[0].fallisubiti = Math.floor(Math.random() * 30);
+// squadreCalcio[1].fallisubiti = Math.floor(Math.random() * 30);
+// squadreCalcio[2].fallisubiti = Math.floor(Math.random() * 30);
+// squadreCalcio[3].fallisubiti = Math.floor(Math.random() * 30);
+// squadreCalcio[4].fallisubiti = Math.floor(Math.random() * 30);
 
-console.log(arrayRandom);
+// squadreCalcio[0].puntifatti = Math.floor(Math.random() * 30);
+// squadreCalcio[1].puntifatti = Math.floor(Math.random() * 30);
+// squadreCalcio[2].puntifatti = Math.floor(Math.random() * 30);
+// squadreCalcio[3].puntifatti = Math.floor(Math.random() * 30);
+// squadreCalcio[4].puntifatti = Math.floor(Math.random() * 30);
 
-squadreCalcio[0]["fallisubiti"] = arrayRandom[i];
-squadreCalcio[1]["fallisubiti"] = arrayRandom[i];
-squadreCalcio[2]["fallisubiti"] = arrayRandom[i];
-squadreCalcio[3]["fallisubiti"] = arrayRandom[i];
-squadreCalcio[4]["fallisubiti"] = arrayRandom[i];
+//uso un foreach per assegnare un numero random ai punti fatti e ai falli subiti
+squadreCalcio.forEach((squadra) => {
+	squadra.puntifatti = Math.floor(Math.random() * 30);
+	squadra.fallisubiti = Math.floor(Math.random() * 30);
+});
 
 console.log(squadreCalcio);
+
+//compongo un nuovo array conntenente i nomi delle squadra e i falli
+const newArray = squadreCalcio.map((squadra) => {
+	return { nome: squadra.nome, fallisubiti: squadra.fallisubiti };
+});
+
+//stampo il nuovo array
+console.log(newArray);
