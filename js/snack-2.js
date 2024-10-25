@@ -38,20 +38,14 @@ const arrayRandom = [];
 for (let i = 1; i <= 5; i++) {
 	const numeroRandom = Math.floor(Math.random() * 30);
 	arrayRandom.push(numeroRandom);
-	squadreCalcio[i][fallisubiti] = numeroRandom;
 }
+
 console.log(arrayRandom);
 
-// for (let i = 0; i < squadreCalcio; i++) {
-// 	for (let i = 0; i < arrayRandom; i++) {
-// 		squadreCalcio[i]["fallisubiti"] = arrayRandom[i];
-// 	}
-// }
+squadreCalcio[0]["fallisubiti"] = arrayRandom[i];
+squadreCalcio[1]["fallisubiti"] = arrayRandom[i];
+squadreCalcio[2]["fallisubiti"] = arrayRandom[i];
+squadreCalcio[3]["fallisubiti"] = arrayRandom[i];
+squadreCalcio[4]["fallisubiti"] = arrayRandom[i];
 
 console.log(squadreCalcio);
-
-// squadreCalcio[i]["fallisubiti"] = arrayRandom[i];
-// squadreCalcio[i]["fallisubiti"] = arrayRandom[i];
-// squadreCalcio[i]["fallisubiti"] = arrayRandom[i];
-// squadreCalcio[i]["fallisubiti"] = arrayRandom[i];
-// squadreCalcio[i]["fallisubiti"] = arrayRandom[i];
